@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <title>Django 2ASIR - {% block titulo %}Inicio{% endblock %}</title>
+
+
+    </head>
+
+
+    <body>
+        <header>
+            <h1>DJANGO 2ASIR</h1>
+            <nav>
+                <a href="/" class="neon-link" >Inicio</a>
+                <a href="{% url 'productos_url' %}" class="neon-link">Productos</a>
+                <a href="{% url 'ventas_url' %}" class="neon-link">Ventas</a>
+            
+            </nav>
+        </header>
+        <aside>
+
+        </aside>
+        <article>
+            <p>{{ parrafo }}</p>
+            {% block contenido %}
+            {% endblock %}
+
+        </article>
+        <footer>
+            <p>Juan Antonio Gil Alba 2 ASIR - 2026</p>
+        </footer>
+
+
+
+    </body>
+
+
+</html>
