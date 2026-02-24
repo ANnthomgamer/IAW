@@ -1,0 +1,26 @@
+{% extends "index.html" %}
+{% block contenido %}
+    <h2>Alta de Nuevo Producto</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label>Nombre del producto</label>
+        </br>
+        <input type="text" placeholder="Nombre del producto">
+        <br>
+        <label for="description"> Descripcion del producto:</label>
+        </br>
+            <textarea id="description", name="Descripcion", rows="3", cols="20">Escribe aquí los detalles...</textarea>
+        </label>
+        </br>
+        <label>Stock</label>
+        </br>
+        <input type="number" placeholder="Stock">
+        </br>
+        <label>Seccion</label>
+
+
+        </br>
+        <button type="submit" class="neon-btn">Guardar</button>
+    </form>
+{% endblock %}
+

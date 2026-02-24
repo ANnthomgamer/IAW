@@ -19,3 +19,6 @@ def productos_views(request):
     
     return render(request, "productos/index.html", {"parrafo":mensaje})
     # return HttpResponse(documento)
+
+def productos_alta_views(request):
+    return render(request, 'productos/alta.html')
