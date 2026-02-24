@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <title>Django 2ASIR - {% block titulo %}Inicio{% endblock %}</title>
+
+
+    </head>
+
+
+    <body>
+        <header>
+            <h1>DJANGO 2ASIR</h1>
+            <nav>
+                <a href="/" class="neon-link" >Inicio</a>
+                <select name="menu", id="menu", class="neon-link", onchange="location = this.value;">
+                    <option value="" selected disabled>PRODUCTOS</option>
+                    <option value="{% url 'productos_url' %}">Listado de  productos</option>
+                    <option value="{% url 'productos_alta' %}">Alta de productos</option>
+                </select>
+                <select>
+                    <option value="" selected disabled>VENTAS</option>
+                    <option value="{% url 'ventas_url' %}">Listado Ventas</option>
+                </select>
+            
+            </nav>
+        </header>
+        <aside>
+
+        </aside>
+        <article>
+            <p>{{ parrafo }}</p>
+            {% block contenido %}
+            {% endblock %}
+
+        </article>
+        <footer>
+            <p>Juan Antonio Gil Alba 2 ASIR - 2026</p>
+        </footer>
+
+
+
+    </body>
+
+
+</html>
