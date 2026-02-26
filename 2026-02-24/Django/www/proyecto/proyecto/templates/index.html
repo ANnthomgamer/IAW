@@ -5,7 +5,8 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
         <title>Django 2ASIR - {% block titulo %}Inicio{% endblock %}</title>
-
+        <!-- NUEVO: Bloque para CSS específico de cada página -->
+        {% block extra_css %}{% endblock %}
 
     </head>
 

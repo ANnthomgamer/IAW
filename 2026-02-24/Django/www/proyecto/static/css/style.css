@@ -50,6 +50,7 @@ nav {
     gap: 20px; /* Espacio entre botones */
 }
 
+
 button, select {
     background: transparent;
     border: 1px solid var(--neon-pink);
@@ -71,6 +72,10 @@ button:hover {
 article {
     max-width: 900px;
     margin: 60px auto;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     padding: 40px;
     background: var(--glass);
     border-left: 4px solid var(--neon-cyan);
