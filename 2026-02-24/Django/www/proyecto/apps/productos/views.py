@@ -22,3 +22,7 @@ def productos_views(request):
 
 def productos_alta_views(request):
     return render(request, 'productos/alta.html')
+
+
+def productos_modificar_views(request):
+    return render(request, 'productos/modificar.html')
